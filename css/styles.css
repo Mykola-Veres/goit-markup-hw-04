@@ -117,6 +117,7 @@ body {
   padding-bottom: 32px;
   display: block;
   color: var(--primary-text-color);
+  display: flex;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -124,6 +125,28 @@ body {
 }
 .nav-contacts-item:not(:last-child) {
   margin-right: 50px;
+  display: flex;
+}
+.nav-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  margin: auto 10px auto auto;
+  color: var(--primary-text-color);
+}
+.nav-envelope-tell {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  color: var(--primary-text-color);
+}
+.nav-envelope:hover,
+.nav-envelope:focus {
+  fill: var(--accent-color);
+}
+.nav-envelope-tell:hover,
+.nav-envelope-tell:focus {
+  fill: var(--accent-color);
 }
 /* hero */
 .hero-title {
@@ -140,11 +163,17 @@ body {
   color: var(--secondary-color-white);
 }
 .hero-width {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
   margin: 0 auto;
   max-width: 1600px;
+  height: 600px;
   background-color: var(--bgc-hero-footer);
 }
 /* button */
@@ -194,6 +223,8 @@ body {
 .button-portfolio:focus {
   color: var(--secondary-color-white);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* section features */
 .section-features {
@@ -219,6 +250,17 @@ body {
 }
 .features-flex .item:not(:last-child) {
   margin-right: var(--margin-content);
+}
+.icon-features {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.icon-features > .icon {
+  padding: 25px 100px;
 }
 /* section made */
 .made-title {
@@ -283,6 +325,65 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.icon-flex {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: 16px;
+}
+.icon-flex-team {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: var(--secondary-color-white);
+  fill: #afb1b8;
+}
+.icon-flex-team:hover,
+.icon-flex-team:focus {
+  background-color: var(--accent-color);
+  fill: var(--secondary-color-white);
+}
+.icon-flex-team:not(:last-child) {
+  margin-right: 10px;
+}
+/* customer */
+.customer-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.31;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.customer-icon-flex {
+  display: flex;
+}
+.customer-icon {
+  display: flex;
+  fill: #afb1b8;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.customer-icon-conteiner:not(:last-child) {
+  margin-right: var(--margin-content);
+}
+.customer-logo {
+  width: 106px;
+  height: 60px;
+}
+.customer-icon:focus,
+.customer-icon:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
 /* footer */
 .footer {
   font-style: normal;
@@ -309,6 +410,40 @@ body {
 .footer-margin:not(:last-child) {
   margin-bottom: 9px;
 }
+.icon-footer {
+  display: flex;
+}
+.icon-flex-footer {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  fill: var(--secondary-color-white);
+}
+.icon-margin-footer:not(:last-child) {
+  margin-right: 10px;
+}
+.icon-flex-footer:hover,
+.icon-flex-footer:focus {
+  background-color: var(--accent-color);
+}
+.address-flex {
+  display: flex;
+}
+.icon-footer-conteiner {
+  margin-left: 70px;
+}
+.join-footer {
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-color-white);
+  font-style: normal;
+  margin-bottom: 20px;
+}
 /* page portfolio */
 .title-portfolio {
   margin-top: 0px;
@@ -333,9 +468,14 @@ body {
   margin-top: -30px;
 }
 .portfolio-flex .item {
-  flex-basis: calc((100% - 90px) / 3);
+  flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+}
+.portfolio-flex .item:hover,
+.portfolio-flex .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-set-border {
   border: 1px solid #eeeeee;
