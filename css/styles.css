@@ -128,20 +128,16 @@ body {
   display: flex;
 }
 .nav-envelope {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   margin: auto 10px auto auto;
   color: var(--primary-text-color);
 }
 .nav-envelope-tell {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
   color: var(--primary-text-color);
 }
-.nav-envelope:hover,
-.nav-envelope:focus {
+.contact-link:hover,
+.contact-link:focus {
   fill: var(--accent-color);
 }
 .nav-envelope-tell:hover,
@@ -253,14 +249,13 @@ body {
 }
 .icon-features {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-}
-.icon-features > .icon {
-  padding: 25px 100px;
 }
 /* section made */
 .made-title {
@@ -327,15 +322,18 @@ body {
 }
 .icon-flex {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 32px;
+  margin-right: 30px;
   margin-top: 16px;
 }
 .icon-flex-team {
-  display: flex;
   width: 44px;
   height: 44px;
-  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: var(--secondary-color-white);
   fill: #afb1b8;
@@ -345,8 +343,9 @@ body {
   background-color: var(--accent-color);
   fill: var(--secondary-color-white);
 }
-.icon-flex-team:not(:last-child) {
-  margin-right: 10px;
+.icon-team {
+  width: 20px;
+  height: 20px;
 }
 /* customer */
 .customer-title {
@@ -417,7 +416,8 @@ body {
   display: flex;
   width: 44px;
   height: 44px;
-  padding: 12px;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   fill: var(--secondary-color-white);
@@ -472,8 +472,11 @@ body {
   margin-left: 30px;
   margin-top: 30px;
 }
-.portfolio-flex .item:hover,
-.portfolio-flex .item:focus {
+.portfolio-set-action {
+  display: block;
+}
+.portfolio-set-action:hover,
+.portfolio-set-action:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
